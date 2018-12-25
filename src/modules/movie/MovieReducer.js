@@ -30,6 +30,10 @@ export default function MovieStateReducer(state = InitialState, action) {
 								 .setIn(['movies', 'data'], page_number == 1 ? fromJS(movies) : prevMovies.concat(fromJS(movies)))
 			return nextState
 		}
+		case types.GET_MOVIE_DETAIL:{
+			let nextState = state.setIn(['selected_movie', 'data'],action.movie).setIn(['selected_movie', 'fetching'],true)
+			return nextState
+		}
 		default:
 			return state
 	}

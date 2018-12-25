@@ -2,7 +2,7 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import {NavigationActions} from 'react-navigation'
 import MoviesView from '../component/MoviesView'
-import { getMovies } from '../MovieActions'
+import { getMovies, getMovieDetail } from '../MovieActions'
 
 export default connect(
    state => ({
@@ -13,6 +13,7 @@ export default connect(
      return {
        navigate: bindActionCreators(NavigationActions.navigate, dispatch),
        getMovies: bindActionCreators(getMovies, dispatch),
+       getMovieDetail: bindActionCreators(getMovieDetail, dispatch),
      }
    }
 )(MoviesView)

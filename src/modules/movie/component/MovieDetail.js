@@ -18,7 +18,13 @@ class MovieDetail extends Component {
     this.props.navigation.goBack()
   }
 
+  // constructor(props) {
+  //   // this.props.getMovieDetail(movie)
+  // }
+
   render() {
+    // let sta=this.props
+    // alert(JSON.stringify(this.props.movie))
     return (
       <View style={styles.container}>
         <View style={styles.coverContainer}>
@@ -31,6 +37,11 @@ class MovieDetail extends Component {
             </Text>
           </TouchableOpacity>
         </View>
+        
+        <View style={styles.bodyContainer}>
+          <Text style={styles.description}>{'Ene kinonii id : '+this.props.movie.data.id}</Text>
+        </View>        
+        
       </View>
     );
   }
@@ -53,6 +64,15 @@ const styles = StyleSheet.create({
     width: 50,
     justifyContent: 'center',
     //backgroundColor: 'green',
+  },
+  bodyContainer:{
+    flex:2,
+  },
+  description:{
+    position: 'absolute',
+    top:150,
+    left:50,
+    color:'white',
   },
   backText: {
     color: '#fff',

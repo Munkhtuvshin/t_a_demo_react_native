@@ -1,5 +1,5 @@
 import * as types from './MovieConstant'
-import { fetchMovies } from './MovieApi'
+import { fetchMovies} from './MovieApi'
 
 const SUCCESS = 'ok'
 
@@ -17,5 +17,11 @@ export function getMovies(params) {
 		.catch((error) => {
 			dispatch({ type: types.GET_MOVIES_FAILED, })
 		})
+	}
+}
+
+export function getMovieDetail(movie){
+	return dispatch => {
+		dispatch({ type: types.GET_MOVIE_DETAIL, movie:movie })
 	}
 }

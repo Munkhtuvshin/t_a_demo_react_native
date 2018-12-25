@@ -56,6 +56,8 @@ class MoviesView extends Component {
   }
 
   onMoviePressed = (movie) => {
+    // alert(JSON.stringify(movie))
+    this.props.getMovieDetail(movie)
     this.props.navigation.navigate({ routeName: 'MovieDetail' })
   }
 

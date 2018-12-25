@@ -1,0 +1,4 @@
+#Tue Dec 25 10:43:32 ULAT 2018
+base.0=/home/pc/Downloads/t_a_demo_react_native/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

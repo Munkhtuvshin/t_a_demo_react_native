@@ -16,3 +16,7 @@ export function fetchMovies({ page, quality }) {
 
 	return axios.get(API_URL + 'list_movies.json?' + query)
 }
+
+export function getMovieDetails(){
+	return axios.get('https://yts.am/api/v2/movie_details.json?movie_id=10');
+}
